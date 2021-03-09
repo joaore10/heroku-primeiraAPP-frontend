@@ -1,4 +1,5 @@
 const gulp = require('gulp')
+const { env } = require('gulp-util')
 const watch = require('gulp-watch')
 const webserver = require('gulp-webserver')
 
@@ -12,7 +13,7 @@ gulp.task('watch', () => {
 gulp.task('server',['watch'], () => {
     return gulp.src('public').pipe(webserver({
         livereload: true,
-        port: 3000,
+        port: process.env.PORT,
         open: true
     }))
 })

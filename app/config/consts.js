@@ -4,8 +4,8 @@ angular.module('primeiraApp').constant('consts', {
     owner: 'João Ré',
     year: '2020',
     site: 'http://google.com.br',
-    apiUrl: 'http://localhost:3003/api',
-    oapiUrl: 'http://localhost:3003/oapi',
+    apiUrl: 'https://heroku-primeiraapp-backend.herokuapp.com/api',
+    oapiUrl: 'https://heroku-primeiraapp-backend.herokuapp.com/oapi',
     userKey: '_primeira_app_user'
 }).run(['$rootScope', 'consts', function($rootScope, consts){
     $rootScope.consts = consts
